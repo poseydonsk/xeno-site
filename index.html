@@ -74,7 +74,7 @@
         flex-wrap: wrap;
       }
 
-      .button-row button {
+      .button-row a {
         background: #111;
         color: white;
         padding: 14px 30px;
@@ -83,10 +83,11 @@
         font-size: 16px;
         font-weight: bold;
         cursor: pointer;
+        text-decoration: none;
         transition: all 0.3s;
       }
 
-      .button-row button:hover {
+      .button-row a:hover {
         background: #222;
         box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
       }
@@ -98,47 +99,6 @@
         font-size: 1em;
       }
 
-      .faq-section {
-        padding: 60px 20px;
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .faq-section h2 {
-        text-align: center;
-        font-size: 2em;
-        margin-bottom: 30px;
-      }
-
-      .faq-section h2 strong {
-        color: white;
-      }
-
-      .faq-section h2 span {
-        color: #7289da;
-      }
-
-      .faq-item {
-        background: #111;
-        border: 1px solid #333;
-        border-radius: 8px;
-        margin-bottom: 15px;
-        padding: 20px;
-        cursor: pointer;
-        transition: 0.3s;
-      }
-
-      .faq-item:hover {
-        background: #1a1a1a;
-      }
-
-      .faq-answer {
-        display: none;
-        margin-top: 10px;
-        color: #aaa;
-        font-size: 0.95em;
-      }
-
       footer {
         text-align: center;
         padding: 20px;
@@ -148,14 +108,6 @@
         margin-top: 60px;
       }
     </style>
-    <script>
-      function toggleFAQ(element) {
-        const answer = element.querySelector(".faq-answer");
-        const isVisible = answer.style.display === "block";
-        document.querySelectorAll(".faq-answer").forEach((a) => (a.style.display = "none"));
-        answer.style.display = isVisible ? "none" : "block";
-      }
-    </script>
   </head>
   <body>
     <header>
@@ -176,29 +128,13 @@
     </header>
 
     <section class="hero">
-      <img src="https://www.xeno.onl/images/Xeno-V1.2.0.png" alt="Xeno Screenshot">
+      <img src="https://www.xeno.onl/images/Xeno-V1.2.0.png" alt="Xeno Screenshot" />
       <div class="button-row">
-        <button onclick="window.location.href='https://xeno.onl/download'">Download Now ⬇</button>
-        <button onclick="window.location.href='https://yourhelplink.com'">Help & Tutorial →</button>
+        <a href="https://xeno.onl/download">Download Now ⬇</a>
+        <a href="https://xeno.onl/help">Help & Tutorial →</a>
       </div>
       <div class="subtext">
         Xeno executor is a free, keyless external executor for Roblox to optimize your gaming experience.
-      </div>
-    </section>
-
-    <section class="faq-section">
-      <h2><strong>Frequently</strong> <span>Asked Questions</span></h2>
-      <div class="faq-item" onclick="toggleFAQ(this)">
-        Is Xeno Safe?
-        <div class="faq-answer">Yes, Xeno is safe to use and does not contain any malware.</div>
-      </div>
-      <div class="faq-item" onclick="toggleFAQ(this)">
-        Can I get banned with Xeno?
-        <div class="faq-answer">There is a risk when using any third-party software. Use at your own discretion.</div>
-      </div>
-      <div class="faq-item" onclick="toggleFAQ(this)">
-        How often does Xeno update?
-        <div class="faq-answer">Xeno is regularly updated to support the latest Roblox versions.</div>
       </div>
     </section>
 
