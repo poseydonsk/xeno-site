@@ -1,112 +1,130 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-black text-white">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Xeno Executor Clone</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="font-sans bg-black text-white">
-  <!-- Навігація -->
-  <nav class="flex justify-between items-center px-6 py-4 bg-black border-b border-gray-700">
-    <div class="text-xl font-bold">🛸 Xeno</div>
-    <ul class="flex space-x-6 text-sm">
-      <li><a href="#" class="hover:text-gray-300">Home</a></li>
-      <li><a href="#" class="hover:text-gray-300">About</a></li>
-      <li><a href="#" class="hover:text-gray-300">Help</a></li>
-      <li><a href="#" class="hover:text-gray-300">Executor</a></li>
-      <li><a href="#" class="hover:text-gray-300">Download</a></li>
-      <li><a href="#" class="hover:text-gray-300">Credits</a></li>
-      <li><a href="#" class="hover:text-gray-300">Donate</a></li>
-    </ul>
-    <a href="#" class="text-sm text-gray-400 hover:text-white">Join Discord</a>
-  </nav>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xeno Download</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background-color: #0d0d0d;
+        color: #fff;
+        text-align: center;
+      }
 
-  <!-- Головна секція -->
-  <section id="main" class="text-center py-16">
-    <img src="https://www.xeno.onl/images/Xeno-V1.2.0.png" alt="Xeno Screenshot" class="mx-auto rounded-lg shadow-2xl max-w-4xl" />
-    <div class="mt-10 flex justify-center space-x-4">
-      <button onclick="showDownloadSection()" class="bg-white text-black px-6 py-3 rounded-md text-base font-medium hover:bg-gray-200 transition">Download Now ⬇️</button>
-      <a href="#" class="bg-[#0e0e0e] border border-white px-6 py-3 rounded-md text-base font-medium hover:bg-gray-900 transition">Help & Tutorial ➡️</a>
-    </div>
-    <p class="mt-4 text-gray-400 text-sm">Xeno executor is a free, keyless external executor for Roblox to optimize your gaming experience.</p>
-  </section>
+      header {
+        padding: 20px 0;
+        font-size: 1.5em;
+        font-weight: bold;
+      }
 
-  <!-- Download Section (спочатку прихована) -->
-  <section id="download" class="hidden max-w-5xl mx-auto py-16">
-    <h2 class="text-4xl font-bold text-center mb-2">Download Xeno</h2>
-    <p class="text-center text-gray-400 mb-10">Experience the next generation of scripting</p>
+      .download-section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
 
-    <div class="bg-[#111] p-6 rounded-xl shadow-lg grid md:grid-cols-2 gap-6">
-      <div>
-        <div class="flex items-center space-x-4 mb-4">
-          <img src="https://www.xeno.onl/images/Xeno-V1.2.0.png" class="w-12 h-12 rounded-full" />
-          <div>
-            <h3 class="text-xl font-semibold">Xeno 1.2.45</h3>
-            <span class="text-sm text-gray-400">⭐ Latest Release</span>
-          </div>
+      .download-section h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
+
+      .download-section p {
+        color: #aaa;
+        margin-bottom: 40px;
+      }
+
+      .card {
+        background: radial-gradient(circle at center, #1a1a1a, #000);
+        border-radius: 12px;
+        padding: 30px;
+        width: 300px;
+        margin: 20px auto;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .card img {
+        width: 80px;
+        margin-bottom: 20px;
+      }
+
+      .card h3 {
+        margin-bottom: 10px;
+        font-size: 1.2em;
+      }
+
+      .card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 20px 0;
+        color: #ccc;
+        font-size: 0.9em;
+      }
+
+      .card ul li::before {
+        content: "→ ";
+        color: #999;
+      }
+
+      .card button {
+        padding: 10px 20px;
+        border: none;
+        background: #111;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      .card button:hover {
+        background: #222;
+      }
+    </style>
+  </head>
+  <body>
+    <header>🚀 Xeno</header>
+    <section class="download-section">
+      <h1>Choose <strong>Your Download Method</strong></h1>
+      <p>Select your preferred way to download Xeno</p>
+
+      <div id="card-container">
+        <div class="card" id="card-linkvertise">
+          <img src="https://cdn-icons-png.flaticon.com/512/889/889102.png" alt="Linkvertise Logo" />
+          <h3>Linkvertise</h3>
+          <p>Quick and easy download through Linkvertise</p>
+          <ul>
+            <li>Fast Download</li>
+            <li>Secure Link</li>
+            <li>Easy Process</li>
+          </ul>
+          <button onclick="nextStep()">Download Now ↗</button>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div class="bg-black/50 p-4 rounded-md">
-            <h4 class="font-bold">👥 Good Community</h4>
-            <p class="text-sm text-gray-400">Join our growing community</p>
+      </div>
+    </section>
+
+    <script>
+      function nextStep() {
+        const container = document.getElementById('card-container');
+        container.innerHTML = `
+          <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/889/889102.png" alt="Download Logo" />
+            <h3>Download Directly</h3>
+            <p>No Linkvertise – Direct file access</p>
+            <ul>
+              <li>Instant Download</li>
+              <li>No Redirection</li>
+              <li>Secure Link</li>
+            </ul>
+            <button onclick="window.location.href='https://yourdownloadlink.com'">Download Now ↗</button>
           </div>
-          <div class="bg-black/50 p-4 rounded-md">
-            <h4 class="font-bold">➰ Multi Attach</h4>
-            <p class="text-sm text-gray-400">Attach to multiple Clients at once</p>
-          </div>
-          <div class="bg-black/50 p-4 rounded-md">
-            <h4 class="font-bold">⚡ Performance</h4>
-            <p class="text-sm text-gray-400">Run scripts with high speed</p>
-          </div>
-        </div>
-        <button class="mt-6 bg-white text-black px-6 py-3 rounded-md text-base font-medium hover:bg-gray-200 transition">Download Now ⬇️</button>
-      </div>
-
-      <div class="bg-black/30 p-4 rounded-md max-h-80 overflow-y-auto">
-        <h4 class="text-lg font-semibold mb-2">📋 Latest Updates</h4>
-        <ul class="space-y-2 text-sm text-gray-300">
-          <li class="bg-gray-800 px-3 py-2 rounded-md">Patched In-game detections (detections by games)</li>
-          <li class="bg-gray-800 px-3 py-2 rounded-md">Xeno http lib fix</li>
-          <li class="bg-gray-800 px-3 py-2 rounded-md">Xeno client function improvements</li>
-          <li class="bg-gray-800 px-3 py-2 rounded-md">15x faster attach speed</li>
-          <li class="bg-gray-800 px-3 py-2 rounded-md">Removed CFI</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="max-w-2xl mx-auto mb-20">
-    <h2 class="text-3xl font-bold mb-6 text-center">Frequently <span class="text-gray-400">Asked</span> Questions</h2>
-    <div class="space-y-4">
-      <div class="border border-gray-600 rounded-lg">
-        <button class="w-full text-left px-4 py-3 focus:outline-none faq-toggle font-semibold">Is Xeno Safe?</button>
-        <div class="faq-content hidden px-4 pb-4 text-gray-300">Xeno is developed with safety in mind, but use at your own risk.</div>
-      </div>
-      <div class="border border-gray-600 rounded-lg">
-        <button class="w-full text-left px-4 py-3 focus:outline-none faq-toggle font-semibold">Can I get banned with Xeno?</button>
-        <div class="faq-content hidden px-4 pb-4 text-gray-300">There's always a risk. Use executors carefully and avoid suspicious scripts.</div>
-      </div>
-      <div class="border border-gray-600 rounded-lg">
-        <button class="w-full text-left px-4 py-3 focus:outline-none faq-toggle font-semibold">How often does Xeno update?</button>
-        <div class="faq-content hidden px-4 pb-4 text-gray-300">Xeno updates frequently to stay compatible with Roblox patches.</div>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    document.querySelectorAll(".faq-toggle").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const content = btn.nextElementSibling;
-        content.classList.toggle("hidden");
-      });
-    });
-
-    function showDownloadSection() {
-      document.getElementById("main").classList.add("hidden");
-      document.getElementById("download").classList.remove("hidden");
-    }
-  </script>
-</body>
+        `;
+      }
+    </script>
+  </body>
 </html>
