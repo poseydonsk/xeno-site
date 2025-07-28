@@ -66,19 +66,22 @@
         margin-top: 60px;
       }
 
-      #downloadPage {
-        display: none;
-        padding: 60px 20px;
-        text-align: center;
+      a.download-button {
+        display: inline-block;
+        margin-top: 30px;
+        background: #000;
+        color: #fff;
+        padding: 15px 30px;
+        border: 1px solid #333;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background 0.3s;
       }
 
-      #downloadPage iframe {
-        width: 100%;
-        max-width: 1200px;
-        height: 700px;
-        border: none;
-        border-radius: 16px;
-        box-shadow: 0 0 60px rgba(255, 255, 255, 0.1);
+      a.download-button:hover {
+        background: #111;
       }
     </style>
   </head>
@@ -100,7 +103,7 @@
       </nav>
     </header>
 
-    <section class="hero" id="mainPage">
+    <section class="hero">
       <h1 style="font-size: 2.8em; font-weight: 800; margin-bottom: 10px;">Download Xeno</h1>
       <p style="color: #888; font-size: 1.2em; margin-bottom: 40px;">Experience the next generation of scripting</p>
 
@@ -136,17 +139,7 @@
             </div>
           </div>
 
-          <button onclick="showDownloadPage()" style="
-            margin-top: 30px;
-            background: #000;
-            color: #fff;
-            padding: 15px 30px;
-            border: 1px solid #333;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-          ">Download Now →</button>
+          <a href="download.html" class="download-button">Download Now →</a>
         </div>
 
         <!-- Right -->
@@ -169,19 +162,8 @@
       </div>
     </section>
 
-    <section id="downloadPage">
-      <iframe src="https://xeno.onl/download"></iframe>
-    </section>
-
     <footer>
       © 2025 Xeno. All rights reserved.
     </footer>
-
-    <script>
-      function showDownloadPage() {
-        document.getElementById("mainPage").style.display = "none";
-        document.getElementById("downloadPage").style.display = "block";
-      }
-    </script>
   </body>
 </html>
