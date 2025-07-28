@@ -74,7 +74,7 @@
         flex-wrap: wrap;
       }
 
-      .button-row a {
+      .button-row button {
         background: #111;
         color: white;
         padding: 14px 30px;
@@ -83,11 +83,10 @@
         font-size: 16px;
         font-weight: bold;
         cursor: pointer;
-        text-decoration: none;
         transition: all 0.3s;
       }
 
-      .button-row a:hover {
+      .button-row button:hover {
         background: #222;
         box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
       }
@@ -106,6 +105,21 @@
         color: #555;
         background: #000;
         margin-top: 60px;
+      }
+
+      #downloadPage {
+        display: none;
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      #downloadPage iframe {
+        width: 100%;
+        max-width: 1200px;
+        height: 700px;
+        border: none;
+        border-radius: 16px;
+        box-shadow: 0 0 60px rgba(255, 255, 255, 0.1);
       }
     </style>
   </head>
@@ -127,19 +141,30 @@
       </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="mainPage">
       <img src="https://www.xeno.onl/images/Xeno-V1.2.0.png" alt="Xeno Screenshot" />
       <div class="button-row">
-        <a href="https://xeno.onl/download">Download Now ⬇</a>
-        <a href="https://xeno.onl/help">Help & Tutorial →</a>
+        <button onclick="showDownloadPage()">Download Now ⬇</button>
+        <button onclick="window.location.href='https://xeno.onl/help'">Help & Tutorial →</button>
       </div>
       <div class="subtext">
         Xeno executor is a free, keyless external executor for Roblox to optimize your gaming experience.
       </div>
     </section>
 
+    <section id="downloadPage">
+      <iframe src="https://xeno.onl/download"></iframe>
+    </section>
+
     <footer>
       © 2025 Xeno. All rights reserved.
     </footer>
+
+    <script>
+      function showDownloadPage() {
+        document.getElementById("mainPage").style.display = "none";
+        document.getElementById("downloadPage").style.display = "block";
+      }
+    </script>
   </body>
 </html>
