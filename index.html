@@ -11,23 +11,37 @@
         font-family: 'Inter', sans-serif;
         background-color: #0d0d0d;
         color: #fff;
-        text-align: center;
       }
 
       header {
-        padding: 20px 0;
-        font-size: 1.5em;
-        font-weight: bold;
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #0d0d0d;
+      }
+
+      nav a {
+        color: #ccc;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: 500;
+      }
+
+      nav a:hover {
+        color: #fff;
       }
 
       .download-section {
-        max-width: 1200px;
+        max-width: 1100px;
         margin: 0 auto;
         padding: 40px 20px;
+        text-align: center;
       }
 
       .download-section h1 {
-        font-size: 2.5em;
+        font-size: 3em;
+        font-weight: 700;
         margin-bottom: 10px;
       }
 
@@ -36,97 +50,153 @@
         margin-bottom: 40px;
       }
 
-      .card {
-        background: radial-gradient(circle at center, #1a1a1a, #000);
-        border-radius: 12px;
+      .download-card {
+        background: #141414;
+        border-radius: 16px;
         padding: 30px;
-        width: 300px;
-        margin: 20px auto;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        transition: transform 0.3s;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+        margin-top: 40px;
+        flex-wrap: wrap;
       }
 
-      .card:hover {
-        transform: scale(1.05);
+      .download-left {
+        flex: 1;
+        min-width: 300px;
+        text-align: left;
       }
 
-      .card img {
-        width: 80px;
-        margin-bottom: 20px;
-      }
-
-      .card h3 {
+      .download-left h2 {
+        font-size: 1.8em;
         margin-bottom: 10px;
-        font-size: 1.2em;
       }
 
-      .card ul {
+      .features {
+        display: flex;
+        gap: 20px;
+        margin: 20px 0;
+        flex-wrap: wrap;
+      }
+
+      .feature {
+        background: #1f1f1f;
+        padding: 20px;
+        border-radius: 10px;
+        flex: 1;
+        min-width: 200px;
+        color: #ccc;
+      }
+
+      .download-btn {
+        background: #000;
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .download-btn:hover {
+        background: #222;
+      }
+
+      .updates {
+        background: #1c1c1c;
+        border-radius: 10px;
+        padding: 20px;
+        max-height: 300px;
+        overflow-y: auto;
+        margin-left: 20px;
+        flex: 1;
+        min-width: 250px;
+      }
+
+      .updates h3 {
+        margin-bottom: 15px;
+      }
+
+      .updates ul {
         list-style: none;
         padding: 0;
-        margin: 0 0 20px 0;
-        color: #ccc;
-        font-size: 0.9em;
+        margin: 0;
       }
 
-      .card ul li::before {
-        content: "→ ";
-        color: #999;
-      }
-
-      .card button {
-        padding: 10px 20px;
-        border: none;
-        background: #111;
-        color: white;
+      .updates li {
+        background: #2a2a2a;
+        padding: 10px;
         border-radius: 6px;
-        cursor: pointer;
+        margin-bottom: 10px;
+        color: #bbb;
       }
 
-      .card button:hover {
-        background: #222;
+      footer {
+        text-align: center;
+        padding: 20px;
+        color: #555;
+        font-size: 0.9em;
       }
     </style>
   </head>
   <body>
-    <header>🚀 Xeno</header>
-    <section class="download-section">
-      <h1>Choose <strong>Your Download Method</strong></h1>
-      <p>Select your preferred way to download Xeno</p>
+    <header>
+      <div><img src="https://i.imgur.com/ALFxFvK.png" alt="Logo" style="height: 24px; vertical-align: middle;" /> <strong style="margin-left: 8px;">Xeno</strong></div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Help</a>
+        <a href="#">Executor</a>
+        <a href="#">Download</a>
+        <a href="#">Credits</a>
+        <a href="#">Donate</a>
+        <a href="#" style="color: #7289da">Join Discord</a>
+      </nav>
+    </header>
 
-      <div id="card-container">
-        <div class="card" id="card-linkvertise">
-          <img src="https://cdn-icons-png.flaticon.com/512/889/889102.png" alt="Linkvertise Logo" />
-          <h3>Linkvertise</h3>
-          <p>Quick and easy download through Linkvertise</p>
+    <section class="download-section">
+      <h1>Download Xeno</h1>
+      <p>Experience the next generation of scripting</p>
+
+      <div class="download-card">
+        <div class="download-left">
+          <h2>🛸 Xeno 1.2.45</h2>
+          <p style="color: #666">🔹 Latest Release</p>
+
+          <div class="features">
+            <div class="feature">
+              <strong>👥 Good Community</strong>
+              <p style="margin-top: 8px">Join our growing community</p>
+            </div>
+            <div class="feature">
+              <strong>🔁 Multi Attach</strong>
+              <p style="margin-top: 8px">Attach to multiple Clients at once</p>
+            </div>
+            <div class="feature">
+              <strong>⚡ Performance</strong>
+              <p style="margin-top: 8px">Run scripts with high speed</p>
+            </div>
+          </div>
+
+          <button class="download-btn" onclick="window.location.href='https://yourdownloadlink.com'">Download Now ↗</button>
+        </div>
+
+        <div class="updates">
+          <h3>⚙️ Latest Updates</h3>
           <ul>
-            <li>Fast Download</li>
-            <li>Secure Link</li>
-            <li>Easy Process</li>
+            <li>Patched in-game detections</li>
+            <li>Xeno http lib fix</li>
+            <li>Xeno client function improvements</li>
+            <li>15x faster attach speed</li>
+            <li>Removed CCL</li>
           </ul>
-          <button onclick="nextStep()">Download Now ↗</button>
         </div>
       </div>
     </section>
 
-    <div id="direct-download" style="display:none">
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/889/889102.png" alt="Download Logo" />
-        <h3>Download Directly</h3>
-        <p>No Linkvertise – Direct file access</p>
-        <ul>
-          <li>Instant Download</li>
-          <li>No Redirection</li>
-          <li>Secure Link</li>
-        </ul>
-        <button onclick="window.location.href='https://yourdownloadlink.com'">Download Now ↗</button>
-      </div>
-    </div>
-
-    <script>
-      function nextStep() {
-        document.getElementById('card-container').style.display = 'none';
-        document.getElementById('direct-download').style.display = 'block';
-      }
-    </script>
+    <footer>
+      © 2025 Xeno. All rights reserved.
+    </footer>
   </body>
 </html>
