@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xeno</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0e0e0e;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #000;
+        }
+        
+        header img {
+            height: 24px;
+            vertical-align: middle;
+        }
+        
+        header strong {
+            margin-left: 8px;
+            font-size: 20px;
+        }
+        
+        nav a {
+            color: #ccc;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #fff;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 100px 20px 60px;
+        }
+        
+        .hero h1 {
+            font-size: 4em;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            color: #aaa;
+            font-size: 1.2em;
+        }
+        
+        .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 40px 20px;
+        }
+        
+        .card {
+            background: #161616;
+            border-radius: 12px;
+            padding: 30px;
+            flex: 1 1 300px;
+            max-width: 360px;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card h3 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        
+        .card p {
+            color: #aaa;
+        }
+        
+        .download-btn {
+            background: #000;
+            color: white;
+            padding: 14px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 40px;
+            transition: background 0.3s;
+        }
+        
+        .download-btn:hover {
+            background: #222;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #555;
+            background: #000;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="https://i.imgur.com/ALFxFvK.png" alt="Logo" />
+            <strong>Xeno</strong>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Help</a>
+            <a href="#">Executor</a>
+            <a href="#">Download</a>
+            <a href="#">Credits</a>
+            <a href="#">Donate</a>
+            <a href="#" style="color: #7289da">Join Discord</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Xeno Executor</h1>
+        <p>The new generation of script execution.</p>
+        <button class="download-btn" onclick="window.location.href='https://yourdownloadlink.com'">Download Now ↗</button>
+    </section>
+
+    <section class="cards">
+        <div class="card">
+            <h3>👥 Good Community</h3>
+            <p>Join our supportive and helpful Discord server.</p>
+        </div>
+        <div class="card">
+            <h3>🔁 Multi Attach</h3>
+            <p>Run on multiple clients with stability and speed.</p>
+        </div>
+        <div class="card">
+            <h3>⚡ High Performance</h3>
+            <p>Enjoy high-speed, stable script execution.</p>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 Xeno. All rights reserved.
+    </footer>
+</body>
+
+</html>
