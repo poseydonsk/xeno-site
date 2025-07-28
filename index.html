@@ -108,22 +108,24 @@
       </div>
     </section>
 
+    <div id="direct-download" style="display:none">
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/889/889102.png" alt="Download Logo" />
+        <h3>Download Directly</h3>
+        <p>No Linkvertise – Direct file access</p>
+        <ul>
+          <li>Instant Download</li>
+          <li>No Redirection</li>
+          <li>Secure Link</li>
+        </ul>
+        <button onclick="window.location.href='https://yourdownloadlink.com'">Download Now ↗</button>
+      </div>
+    </div>
+
     <script>
       function nextStep() {
-        const container = document.getElementById('card-container');
-        container.innerHTML = `
-          <div class="card">
-            <img src="https://cdn-icons-png.flaticon.com/512/889/889102.png" alt="Download Logo" />
-            <h3>Download Directly</h3>
-            <p>No Linkvertise – Direct file access</p>
-            <ul>
-              <li>Instant Download</li>
-              <li>No Redirection</li>
-              <li>Secure Link</li>
-            </ul>
-            <button onclick="window.location.href='https://yourdownloadlink.com'">Download Now ↗</button>
-          </div>
-        `;
+        document.getElementById('card-container').style.display = 'none';
+        document.getElementById('direct-download').style.display = 'block';
       }
     </script>
   </body>
